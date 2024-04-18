@@ -89,3 +89,10 @@ query {
   "query": "{ menuItem(category: \"appetizers\", name: \"Kale Salad\") { name description price } }"
 }
 ```
+
+**Testing**
+
+To run the tests, use the following command:
+```
+npm test
+```
