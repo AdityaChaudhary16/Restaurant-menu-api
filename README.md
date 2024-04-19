@@ -24,18 +24,19 @@ Prerequisites
 Installation
 
 1. Clone this repository to your local machine:
-git clone <repository-url>
+```git clone <repository-url>```
 
 2. Navigate to the project directory:
-cd restaurant-menu-api
+```cd restaurant-menu-api```
 
 3. Install dependencies:
-npm install
+```npm install```
 
 4. Start the server:
-node app.js
+```node app.js```
 
 **Usage**
+
 Once the server is running, you can access the GraphQL endpoint:
 http://localhost:3000/graphql
 
@@ -78,15 +79,27 @@ query {
 
 2. Send GraphQL queries in the request body. For example:
 ```
-{
-  "query": "{ menu { name items { name description price } } }"
+query {
+  menu {
+    name
+    items {
+      name
+      description
+      price
+    }
+  }
 }
 
+
 ```
 
 ```
-{
-  "query": "{ menuItem(category: \"appetizers\", name: \"Kale Salad\") { name description price } }"
+query {
+  menuItem(category: "appetizers", name: "Kale Salad") {
+    name
+    description
+    price
+  }
 }
 ```
 
